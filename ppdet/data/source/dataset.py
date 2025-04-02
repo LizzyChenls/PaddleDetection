@@ -217,7 +217,7 @@ class ImageFolder(DetDataset):
         images = self._parse()
         ct = 0
         records = []
-        anno_file = self.get_anno()
+        anno_file = "/kaggle/input/coco-2017-dataset/coco2017/annotations/instances_train2017.json"
         coco = COCO(anno_file)
         for image in images:
             assert image != '' and os.path.isfile(image), \
